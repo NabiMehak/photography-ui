@@ -807,19 +807,63 @@ a:focus {
 }
 
 
+/* Ensure the Instagram reel matches the responsive styling of the YouTube video */
 .instagram_section {
   padding: 60px 0;
 }
 
 .instagram-box {
-  text-align: center;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
 }
 
 .instagram-media {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
 }
 
-.detail_box_common a {
-  color: #0095f6; /* Instagram blue */
+@media (max-width: 768px) {
+  .instagram-box {
+    padding-bottom: 125%; /* Adjust for mobile aspect ratio */
+  }
 }
 
+/* Additional adjustments to match the design */
+.instagram_section .detail-box {
+  padding: 20px;
+}
+
+.instagram_section .heading_container h2 {
+  font-size: 24px;
+}
+
+.instagram_section .detail-box p {
+  font-size: 16px;
+}
+
+.instagram_section .detail-box a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.instagram_section .detail-box a:hover {
+  text-decoration: underline;
+}
+
+
+.responsive-iframe {
+  width: 100%;
+  height: 400px; /* Default height for larger screens */
+}
+
+@media (max-width: 768px) { /* Adjust the max-width value as needed for your mobile breakpoint */
+  .responsive-iframe {
+    height: 210px; /* Height for mobile screens */
+  }
+}
