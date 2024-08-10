@@ -758,3 +758,45 @@ a:focus {
 
 
 // end footer section
+
+
+
+
+.video_section {
+  padding: 50px 0;
+}
+
+.video_section .video-box {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.video_section .video-box iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video_section .detail-box {
+  text-align: center;
+}
+
+.video_section .heading_container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.video_section p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.video_section a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
